@@ -8,6 +8,11 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+    h1 {
+        font-family: 'Cormorant Garamond', serif; 
+        color: #810826; 
+    }
     li a {
         font-family: 'League Spartan', sans-serif; 
         color: #810826; 
@@ -23,9 +28,11 @@
   </style>
 </head>
 <body>
-  <div class = "border-b border-gray-300 py-4">
-    <div class="container mx-auto flex items-center">  
-      <image src = "Logo.svg" width="263"/> 
+  <header class = "border-b border-gray-300 py-4">
+    <div class="container mx-auto flex items-center flex justify-between">  
+        <a herf="/">
+          <image src = "Logo.svg" width="263"/> 
+        </a>  
         <nav>
           <ul class="flex">
             <li>
@@ -40,6 +47,11 @@
           </ul>
         </nav>
     </div>
-  </div>
+  </header>
+  <section class="hero">
+    <div class="container mx-auto flex items-center flex justify-between">
+      <h1 class="text-8xl">I'm Jeslyn Wang</h1>
+    </div>
+  </section>
 </body>
 </html>
