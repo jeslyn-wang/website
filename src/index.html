@@ -16,6 +16,7 @@
     li a {
         font-family: 'Cormorant Garamond', sans-serif; 
         font-weight:bold;
+        font-size: large;
         color: #810826; 
         text-decoration: none; 
         transition: background-color 0.3s ease;
@@ -32,6 +33,9 @@
     }
     .custom-bg {
       background: linear-gradient(#FFC8CF, #ffffff); 
+    }
+    .custom-nav{
+      background:#ffffff
     }
     .custom-p {
       font-family: 'League Spartan', sans-serif;
@@ -53,10 +57,18 @@
       background-color: #ffffff; 
       color: #810826;
     }
+
+    .shape {
+      position: absolute;
+      top: 50px;
+      right: -100px;
+      width: 250px;  
+      height: auto; 
+    }
   </style>
 </head>
 <body>
-  <div class = "border-b border-gray-300 py-4">
+  <div class = "custom-nav border-gray-300 py-4 relative relative z-10">
     <div class="container mx-auto flex items-center flex justify-between">  
         <a href="index.html">
           <image src = "Logo.svg" width="263"/> 
@@ -80,24 +92,61 @@
     </div>
   </div>
   <div class = "custom-bg h-screen">
-    <section class="hero container mx-auto flex items-center flex justify-evenly h-3/4">
+    <section class="hero container mx-auto flex items-center flex justify-evenly h-3/4 relative">
+   
       <!-- Image Section -->
-      <div class="basis-1/2">
+      <div class="basis-1/2 relative z-10">
         <img src="headshot_w_bg.svg" alt="Descriptive Alt Text" class="w-full h-auto">
       </div>
       
       <!-- Text Section -->
-      <div class="basis-1/2 flex flex-col justify-center p-10">
-        <p class="custom-p mt-6 text-2xl">Hello there!</p>
-        <h1 class="text-8xl font-semibold">I'm Jeslyn Wang</h1>
-        <p class="custom-p mt-6 text-2xl">Computer Engineering Student and ML Enjoyer.</p>
+      <div class="basis-1/2 flex flex-col justify-center p-10 ">
+        <p class="custom-p mt-6 text-2xl relative z-10">Hello there!</p>
+        <h1 class="text-8xl font-semibold relative z-10">I'm Jeslyn Wang</h1>
+        <p class="custom-p mt-6 text-2xl relative z-10">Computer Engineering Student and ML Enjoyer.</p>
 
-        <div class="flex justify-start"> <!-- Center the button within the column -->
+        <div class="flex justify-start relative z-10"> <!-- Center the button within the column -->
           <a href="#" class="custom-button custom-hover">About Me</a>
         </div>
         
       </div>
+      
     </section>
+    <img src="dots_top_right_dep.svg" alt="Decorative Dots" 
+      style="position: absolute; 
+      top: 40px; 
+      right: 0px; 
+      width: auto; 
+      height: auto;
+      z-index: 1;">
+    <img src="circles_top_right.svg"  
+      style="position: absolute; 
+      top: 40px; 
+      right: 0px; 
+      width: auto; 
+      height: auto;
+      z-index: 1;">
+    <img src="circle_bottom_left.svg"
+      style="position: absolute; 
+      bottom: 40px; 
+      left: 30px; 
+      width: auto; 
+      height: auto;
+      z-index: 1;">
+    <img src="flower.svg"  
+      style="position: absolute; 
+      bottom: 200px; 
+      left: 250px; 
+      width: auto; 
+      height: auto;
+      z-index: 1;">
+    <img src="flower.svg"  
+      style="position: absolute; 
+      top: 200px; 
+      right: 550px; 
+      width: auto; 
+      height: auto;
+      z-index: 1;">
   </div>
   
 </body>
