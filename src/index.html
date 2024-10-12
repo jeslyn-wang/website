@@ -36,6 +36,22 @@
       font-family: 'League Spartan', sans-serif;
       color: #810826; 
     }
+    .custom-button {
+      font-family: 'Cormorant Garamond', sans-serif;
+      margin-top: 2rem; 
+      display: inline-block; 
+      padding: 0.75rem 1.5rem;
+      background-color: #810826; 
+      color: white; /* Button text color */
+      font-size: 1.125rem; /* Font size */
+      transition: background-color 0.3s ease; 
+      align-items: center; /* Center text vertically */
+      white-space: nowrap;
+    }
+    .custom-button:hover {
+      background-color: #ffffff; 
+      color: #810826;
+    }
   </style>
 </head>
 <body>
@@ -71,6 +87,11 @@
         <p class="custom-p mt-6 text-2xl">Hello there!</p>
         <h1 class="text-8xl font-semibold">I'm Jeslyn Wang</h1>
         <p class="custom-p mt-6 text-2xl">Computer Engineering Student and ML Enjoyer.</p>
+
+        <div class="flex justify-start"> <!-- Center the button within the column -->
+          <a href="#" class="custom-button custom-hover">About Me</a>
+        </div>
+        
       </div>
     </section>
   </div>
