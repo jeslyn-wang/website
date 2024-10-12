@@ -25,10 +25,17 @@
       color: #ffffff;*/
         text-decoration: underline; /*underline on hover*/
     }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .custom-bg {
+      background: linear-gradient(#FFC8CF, #ffffff); 
+    }
   </style>
 </head>
 <body>
-  <header class = "border-b border-gray-300 py-4">
+  <div class = "border-b border-gray-300 py-4">
     <div class="container mx-auto flex items-center flex justify-between">  
         <a herf="/">
           <image src = "Logo.svg" width="263"/> 
@@ -47,11 +54,21 @@
           </ul>
         </nav>
     </div>
-  </header>
-  <section class="hero">
-    <div class="container mx-auto flex items-center flex justify-between">
-      <h1 class="text-8xl">I'm Jeslyn Wang</h1>
-    </div>
-  </section>
+  </div>
+  <div class = "custom-bg h-screen">
+    <section class="hero container mx-auto flex items-center flex justify-evenly h-3/4">
+      <!-- Image Section -->
+      <div class="basis-1/2">
+        <img src="headshot_w_bg.svg" alt="Descriptive Alt Text" class="w-full h-auto">
+      </div>
+      
+      <!-- Text Section -->
+      <div class="basis-1/2 flex flex-col justify-center p-10">
+        <h1 class="text-8xl font-bold">I'm Jeslyn Wang</h1>
+        <p class="mt-4 text-lg">Welcome to my personal website. Here you can find my projects, blog posts, and more.</p>
+      </div>
+    </section>
+  </div>
+  
 </body>
 </html>
