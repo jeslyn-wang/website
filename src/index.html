@@ -107,6 +107,42 @@
       color: #810826;
     }
 
+    .modal {
+    display: flex; /* Use flexbox to center the modal */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #4203139d; /* Background with transparency */
+    justify-content: center; /* Center the modal content */
+    align-items: center; /* Center the modal content */
+    }
+
+    .modal-content {
+        background-color: #ffecee; /* White background for the content */
+        padding: 20px;
+        border-radius: 5px; /* Rounded corners */
+        width: 90%; /* Full width but limited by max-width */
+        height: 80%; /* Adjust this value to increase height */
+        max-width: none; /* Remove max width */
+        max-height: none; /* Remove max height */
+        overflow-y: auto; /* Add vertical scroll if content exceeds height */
+    }
+
+    .close-button {
+        color: #810826; /* Color of the close button */
+        float: right; /* Position the close button to the right */
+        font-size: 28px; /* Size of the close button */
+        font-weight: bold; /* Bold text */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    .hidden {
+        display: none; 
+    }
+
     @keyframes moveHorizontally {
       0% {
         transform: translateX(0);
@@ -168,6 +204,12 @@
     </style>
 </head>
 <body>
+  <div id="resumeModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <iframe src="Pink AI Resume - Oct 2024.pdf" width="100%" height="100%"></iframe> <!-- Replace with your resume file -->
+    </div>
+</div>
   <div id="blossom_container"></div>
   
   
@@ -185,10 +227,10 @@
               <a href="#about" class="px-4 py-2 rounded-md">About Me</a>
             </li>
             <li>
-              <a href="#" class="px-4 py-2 rounded-md">Projects</a>
+              <a href="#projects" class="px-4 py-2 rounded-md">Projects</a>
             </li>
             <li>
-              <a href="#" class="px-4 py-2 rounded-md">Resume</a>
+              <a id="openModal" class="px-4 py-2 rounded-md">Resume</a>
             </li>
           </ul>
         </nav>
@@ -256,9 +298,9 @@
   </div>
 
 
-  <section class="hero container mx-auto flex items-center flex justify-evenly h-3/4 relative pb-20">
+  <section id="about" class="hero container mx-auto flex items-center flex justify-evenly h-3/4 relative pb-20">
     <div class="basis-1/2 flex flex-col justify-center p-10">
-      <h1 id="about" class="text-6xl font-semibold relative z-10">About Me</h1>
+      <h1 class="text-6xl font-semibold relative z-10">About Me</h1>
       <p class="custom-p mt-6 text-2xl relative z-10">
         I’m a computer engineering student and I’m currently on co-op working as a ML intern at a cloud-based accounting company called Xero!
       </p>
@@ -273,7 +315,7 @@
     
   </section>
 
-  <div class="custom-bg-red">
+  <div id="projects" class="custom-bg-red">
     <section class="hero container mx-auto pt-20 pb-20 relative"> <!-- Keep the relative positioning -->
         <div class="text-center pb-5">
             <h1 class="text-8xl font-semibold relative z-10">My Projects</h1>
@@ -304,6 +346,32 @@
   </section>
 
   <script>
+    // Get the modal
+    var modal = document.getElementById("resumeModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementById("closeModal");
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.classList.remove("hidden");
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.classList.add("hidden");
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.add("hidden");
+        }
+    }
+
 		class Petal {
 			constructor(config) {
 				this.customClass = config.customClass || '';
