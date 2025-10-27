@@ -143,6 +143,23 @@
         display: none; 
     }
 
+    /* Add this inside the <style> tag in index.html */
+.project-image {
+    width: 400px; /* From your original style */
+    height: auto; /* From your original style */
+    margin: 0 30px; /* From your original style */
+    
+    /* New styles for interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
     @keyframes moveHorizontally {
       0% {
         transform: translateX(0);
@@ -302,7 +319,7 @@
     <div class="basis-1/2 flex flex-col justify-center p-10">
       <h1 class="text-6xl font-semibold relative z-10">About Me</h1>
       <p class="custom-p mt-6 text-2xl relative z-10">
-        I’m a computer engineering student and I’m currently on co-op working as a ML intern at a cloud-based accounting company called Xero!
+        I’m currently a 4th year Computer Engineering student at the University of Toronto with interests in Machine Learning!
       </p>
       <p class="custom-p mt-6 text-2xl relative z-10">
         In my free time I like to draw, play video games and find cute cafes downtown. I'm also love travelling to new places! Feel free to contact me if you have any questions - I’d love to chat!
@@ -310,33 +327,45 @@
     </div>
   
     <div class="basis-1/2 relative z-10">
-      <img src="beach_face.svg" alt="Descriptive Alt Text" style="width: 500px; height: auto;">
+      <img src="nihao.svg" alt="Descriptive Alt Text" style="width: 500px; height: auto;">
     </div>
     
   </section>
 
   <div class="custom-bg-red">
-    <section id="projects" class="hero container mx-auto pt-20 pb-20 relative"> <!-- Keep the relative positioning -->
-        <div class="text-center pb-5">
-            <h1 class="text-8xl font-semibold relative z-10">My Projects</h1>
-        </div>
-        
-        <!-- Centering and positioning the red circle behind the images -->
-        <img src="projects_red_circle.svg" 
-             style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); z-index: 0; width: 60%; height: auto;"> <!-- Adjust size as needed -->
+  <section id="projects" class="hero container mx-auto pt-20 pb-20 relative"> <div class="text-center pb-5">
+          <h1 class="text-8xl font-semibold relative z-10">My Projects</h1>
+      </div>
+      
+      <img src="projects_red_circle.svg" 
+           style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); z-index: 0; width: 60%; height: auto;"> <div class="image-container">
+          <a href="project-template.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="Pokémon Type Classifier" class="project-image">
+          </a>
+          
+          <a href="project-mapping.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="Mapping Service" class="project-image">
+          </a>
+          
+          <a href="project-template.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="New Project" class="project-image">
+          </a>  
+      </div>
 
-        <div class="image-container">
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;"> <!-- Ensure these have higher z-index -->
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;">
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;">  
-        </div>
-
-        <div class="image-container">
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;">
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;">
-            <img src="pokemon_project.svg" class="project-image" style="width: 400px; height: auto; z-index: 10;">  
-        </div>
-    </section>
+      <div class="image-container">
+          <a href="project-template.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="New Project" class="project-image">
+          </a>
+          
+          <a href="project-template.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="New Project" class="project-image">
+          </a>
+          
+          <a href="project-template.html" style="z-index: 10;">
+              <img src="pokemon_project.svg" alt="New Project" class="project-image">
+          </a>  
+      </div>
+  </section>
 </div>
 
   
