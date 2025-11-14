@@ -147,7 +147,6 @@
 .project-image {
     width: 400px; /* From your original style */
     height: auto; /* From your original style */
-    margin: 0 30px; /* From your original style */
     
     /* New styles for interactivity */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -212,10 +211,26 @@
         margin-top: 20px; /* Add space between title and images */
     }
 
+    .project-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
+    }
+
     .project-image {
         width: 400px; /* Set width of each image */
         height: auto; /* Maintain aspect ratio */
-        margin: 0 30px; /* Add padding between images */
+    }
+
+    .project-title {
+        font-family: 'Cormorant Garamond', serif;
+        color: #810826;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        text-align: center;
+        z-index: 1000;
     }
 
     </style>
@@ -224,7 +239,7 @@
   <div id="resumeModal" class="modal hidden">
     <div class="modal-content">
         <span class="close-button" id="closeModal">&times;</span>
-        <iframe src="Pink AI Resume - Oct 2024.pdf" width="100%" height="100%"></iframe> <!-- Replace with your resume file -->
+        <iframe src="Jeslyn_Resume_Research.pdf" width="100%" height="100%"></iframe> <!-- Replace with your resume file -->
     </div>
 </div>
   <div id="blossom_container"></div>
@@ -319,10 +334,10 @@
     <div class="basis-1/2 flex flex-col justify-center p-10">
       <h1 class="text-6xl font-semibold relative z-10">About Me</h1>
       <p class="custom-p mt-6 text-2xl relative z-10">
-        I’m currently a 4th year Computer Engineering student at the University of Toronto with interests in Machine Learning!
+        I'm currently a 4th year Computer Engineering student at the University of Toronto with interests in Machine Learning!
       </p>
       <p class="custom-p mt-6 text-2xl relative z-10">
-        In my free time I like to draw, play video games and find cute cafes downtown. I'm also love travelling to new places! Feel free to contact me if you have any questions - I’d love to chat!
+        In my free time I like to draw, play video games and find cute cafes downtown. I'm also love travelling to new places! Feel free to contact me if you have any questions - I'd love to chat!
       </p>
     </div>
   
@@ -339,31 +354,49 @@
       
       <img src="projects_red_circle.svg" 
            style="position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); z-index: 0; width: 60%; height: auto;"> <div class="image-container">
-          <a href="project-template.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="Pokémon Type Classifier" class="project-image">
-          </a>
+          <div class="project-item">
+              <a href="capstone_project.html" style="z-index: 10;">
+                  <img src="capstone_pfp.svg" alt="Capstone" class="project-image">
+              </a>
+              <h2 class="project-title">Capstone Project</h2>
+          </div>
           
-          <a href="project-mapping.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="Mapping Service" class="project-image">
-          </a>
+          <div class="project-item">
+              <a href="project-mapping.html" style="z-index: 10;">
+                  <img src="thesis_pfp.svg" alt="Thesis" class="project-image">
+              </a>
+              <h2 class="project-title">Thesis Project</h2>
+          </div>
           
-          <a href="project-template.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="New Project" class="project-image">
-          </a>  
+          <div class="project-item">
+              <a href="project-template.html" style="z-index: 10;">
+                  <img src="pokemon_project.svg" alt="Pokemon Type Classifier" class="project-image">
+              </a>
+              <h2 class="project-title">Pokemon Type Classifier</h2>
+          </div>
       </div>
 
       <div class="image-container">
-          <a href="project-template.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="New Project" class="project-image">
-          </a>
+          <div class="project-item">
+              <a href="project-template.html" style="z-index: 10;">
+                  <img src="jinu_pfp.svg" alt="Jinu Bot" class="project-image">
+              </a>
+              <h2 class="project-title">Jinu Bot</h2>
+          </div>
           
-          <a href="project-template.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="New Project" class="project-image">
-          </a>
+          <div class="project-item">
+              <a href="project-template.html" style="z-index: 10;">
+                  <img src="aiw_pfp.svg" alt="UTMIST 1" class="project-image">
+              </a>
+              <h2 class="project-title">AI in the Wild</h2>
+          </div>
           
-          <a href="project-template.html" style="z-index: 10;">
-              <img src="pokemon_project.svg" alt="New Project" class="project-image">
-          </a>  
+          <div class="project-item">
+              <a href="project-template.html" style="z-index: 10;">
+                  <img src="colorization_pfp.svg" alt="UTMIST 2" class="project-image">
+              </a>
+              <h2 class="project-title">Colorization Project</h2>
+          </div>
       </div>
   </section>
 </div>
